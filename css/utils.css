@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montez&family=Lilita+One&family=Lato&display=swap");
+
+:root {
+    --primary-color: green;
+    --secondary-color: orange;
+
+    --primary-font: "Lilita One", serif;
+    --secondary-font: Montez, cursive;
+    --paragraph-font: Lato, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a, p {
+    font-size: 1em;
+    font-family: var(--paragraph-font);
+}
+
+body {
+    /* overflow-x: hidden; */
+}
+
+h1 {
+    font-size: 5em;
+    font-family: var(--secondary-font);
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-size: 4em;
+}
+
+.website-name {
+    color: var(--secondary-color);
+}
+
+.website-slogan {
+    color: white
+}
+
+.website-description {
+    color: white;
+}
+
+button {
+    padding: 15px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--paragraph-font);
+    font-size: 1em;
+}

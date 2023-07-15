@@ -1,0 +1,55 @@
+#our-tour-packages {
+    background-color: black;
+    padding: 120px 0;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#container-packages {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+}
+
+.package {
+    text-align: left;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 15px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/sample-image_1080x1080.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.package-discount {
+    width: fit-content;
+    color: var(--primary-color);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.package-about-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.package-about {
+    color: var(--secondary-color);
+}
+
+.package-price {
+    color: var(--primary-color);
+}
+
+#view-all {
+    background-color: var(--secondary-color);
+}
