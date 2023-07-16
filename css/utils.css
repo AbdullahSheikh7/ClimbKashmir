@@ -20,7 +20,7 @@ a, p {
 }
 
 body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1 {
@@ -52,4 +52,8 @@ button {
     border-radius: 5px;
     font-family: var(--paragraph-font);
     font-size: 1em;
+}
+
+.display-block {
+    display: block;
 }

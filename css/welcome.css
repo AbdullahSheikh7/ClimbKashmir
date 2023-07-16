@@ -40,13 +40,14 @@ ul li a {
 #welcome::before {
     content: "";
     width: 100%;
-    height: 150vh;
+    padding: 500px 0;
     background-image: url("../img/sample-image_1440x1080.webp");
     background-size: cover;
+    background-position: center;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -3;
 }
 
 /* Search box */
@@ -70,8 +71,8 @@ ul li a {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.dropdown:hover ul {
-    display: block;
+.dropdown:hover {
+    cursor: pointer;
 }
 
 .drop-div-1 {
@@ -87,11 +88,14 @@ ul li a {
     border: 1px solid white;
     position: absolute;
     display: none;
+    /* display: block; */
 }
 
 .dropdown ul li {
+    cursor: default;
     color: white;
-    padding: 5px;
+    padding: 15px;
+    margin: 0;
 }
 
 .dropdown ul li:hover {
