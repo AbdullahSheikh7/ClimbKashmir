@@ -1,4 +1,18 @@
 /* Navbar */
+header {
+    position: relative;
+    animation: slide-in-top-to-bottom 500ms ease-in-out;
+}
+
+@keyframes slide-in-top-to-bottom {
+    from {
+        top: -125px;
+    }
+    to {
+        top: 0;
+    }
+}
+
 nav {
     margin: 2em 6em;
     padding: 5px 15px;
@@ -6,6 +20,7 @@ nav {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -20,6 +35,7 @@ nav ul li:first-child a {
 ul li {
     margin: 0 15px;
     list-style: none;
+    text-align: center
 }
 
 ul li a {
@@ -27,8 +43,38 @@ ul li a {
     text-decoration: none;
 }
 
+ul li a:hover {
+    font-weight: 900;
+}
+
 #contact-us {
     background-color: var(--secondary-color);
+}
+
+#nav-toggle {
+    margin: 15px;
+}
+
+@media (max-width: 1275px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1115px) {
+    #nav-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 1115px) {
+    #header-nav ul {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
 }
 
 /* Welcome */
@@ -41,7 +87,7 @@ ul li a {
     content: "";
     width: 100%;
     padding: 500px 0;
-    background-image: url("../img/sample-image_1440x1080.webp");
+    background-image: url("../img/welcome-bg.webp");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -50,11 +96,22 @@ ul li a {
     z-index: -3;
 }
 
+#black-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
 /* Search box */
 #search-box {
     display: flex;
+    align-items:center ;
     justify-content: space-between;
-    margin: 2em 8em;
+    margin: 1em 5em;
     padding: 25px;
     border: 1px solid white;
     border-radius: 5px;
@@ -62,8 +119,16 @@ ul li a {
     backdrop-filter: blur(5px);
 }
 
+@media (max-width: 1100px) {
+    #search-box {
+        display: none;
+    }
+}
+
 .dropdown {
-    width: 180px;
+    min-width: 150px;
+    margin: 5px;
+    width: 10em;
     font-family: var(--paragraph-font);
     color: white;
     fill: var(--primary-color);
@@ -87,8 +152,13 @@ ul li a {
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid white;
     position: absolute;
-    display: none;
-    /* display: block; */
+    transition: all 100ms linear;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.dropdown:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dropdown ul li {

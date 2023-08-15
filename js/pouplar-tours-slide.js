@@ -1,26 +1,24 @@
 let one = document.getElementsByClassName("ball")[0];
-let two = document.getElementsByClassName("ball")[1];
-let three = document.getElementsByClassName("ball")[2];
+let three = document.getElementsByClassName("ball")[1];
 
 let slides = document.getElementById("slides");
 
-one.addEventListener("click", (e) => {
-    slides.style.left = 0;
-    one.classList.add("active-ball");
-    two.classList.remove("active-ball");
-    three.classList.remove("active-ball");
-});
+let left = 0;
 
-two.addEventListener("click", (e) => {
-    slides.style.left = "-900px";
-    one.classList.remove("active-ball");
-    two.classList.add("active-ball");
-    three.classList.remove("active-ball");
+one.addEventListener("click", (e) => {
+    left += 350;
+    slides.style.left = left + "px";
+    if (left > 0) {
+        left = 0;
+        slides.style.left = left + "px";
+    }
 });
 
 three.addEventListener("click", (e) => {
-    slides.style.left = "-1800px";
-    one.classList.remove("active-ball");
-    two.classList.remove("active-ball");
-    three.classList.add("active-ball");
+    left -= 350;
+    slides.style.left = left + "px";
+    if (left < screen.width - slides.clientWidth) {
+        left = screen.width - slides.clientWidth;
+        slides.style.left = left + "px";
+    }
 });

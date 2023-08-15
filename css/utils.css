@@ -24,13 +24,13 @@ body {
 }
 
 h1 {
-    font-size: 5em;
     font-family: var(--secondary-font);
+    font-size: 4em;
 }
 
 h2 {
     font-family: var(--primary-font);
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .website-name {
@@ -52,8 +52,26 @@ button {
     border-radius: 5px;
     font-family: var(--paragraph-font);
     font-size: 1em;
+    transition: all 100ms linear;
+}
+
+button:hover {
+    font-weight: 900;
+    box-shadow: 0 0 15px greenyellow;
 }
 
 .display-block {
     display: block;
+}
+
+.tScaleX {
+    transform: scaleX(1);
+}
+
+.tScaleY {
+    transform: scaleY(1);
+}
+
+.tScale {
+    transform: scale(1);
 }

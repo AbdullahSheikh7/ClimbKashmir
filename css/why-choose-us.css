@@ -1,0 +1,75 @@
+#why-choose-us {
+    background-color: black;
+    color: white;
+    fill: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    padding: 5em;
+}
+
+#wcu-content {
+    display: block;
+}
+
+#wcu-content * {
+    margin: 15px;
+}
+
+#wcu-image img {
+    display: block;
+    object-position: center;
+    object-fit: cover;
+}
+
+#reasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#reasons p {
+    margin: 15px 0;
+}
+
+#reasons span {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+#reasons * {
+    margin: 0 5px;
+}
+
+#why-choose-us h1 {
+    color: var(--secondary-color);
+}
+
+#read-more {
+    color: var(--secondary-color);
+    background: none;
+    border: 5px solid var(--secondary-color);
+}
+
+@media (max-width: 1060px) {
+    #why-choose-us {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    #reasons {
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    #wcu-image {
+        display: none;
+    }
+    #wcu-content {
+        background-image: url("../img/man-hiking.webp");
+    }
+}

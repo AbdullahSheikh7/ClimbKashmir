@@ -1,11 +1,20 @@
 #our-popular-tours {
+    background-image: url("../img/plane-route-location.webp");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: white;
     padding: 120px 0;
     position: relative;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .tour-name {
     padding: 0 15px;
+}
+
+.tour:hover .tour-name {
     border-left: 2px solid var(--primary-color);
 }
 
@@ -13,13 +22,8 @@
     display: flex;
     position: relative;
     transition: all 500ms ease-in-out;
-    left: 0;
-}
-
-.container-tours {
-    margin: 50px auto;
     width: fit-content;
-    display: flex;
+    margin: 50px auto;
 }
 
 .tour {
@@ -33,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../img/sample-image_1080x1080.webp");
+    background-image: url("../img/srinager-kashmir-9.webp");
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -41,21 +45,28 @@
 
 #controllers {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-top: -235px;
+    position: absolute;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .ball {
     cursor: pointer;
-    margin: 5px;
     height: 15px;
     width: 15px;
     border-radius: 50%;
     background-color: gray;
+    box-shadow: 0 0 15px 25px white;
 }
 
-.active-ball {
-    height: 20px;
-    width: 20px;
-    background-color: var(--primary-color);
+#one {
+    float: left;
+}
+
+#one {
+    float: right;
 }
